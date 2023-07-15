@@ -1,0 +1,58 @@
+﻿@page
+@model SampleStoreWebApp.Pages.Forms.CustomPizzaModel
+@{
+	ViewData["Title"] = "Customize Pizza";
+}
+@*set text center and is container*@
+<div class="container">
+	<h1>Build your OWN Pizza</h1>
+	<div class="row">
+		<div class="col-6 rounded-1" style="background-color: rgba(200,200,200,0.1)">
+			<form class="mx-auto p-1 mb-5 mt-5" action="" method="post">
+				<div class="mt-3">
+					<label asp-for="pizzasModel.PizzaName"></label>
+					<input required class="form-control" type="text" asp-for=pizzasModel.PizzaName placeholder="Pizza Name..." />
+				</div>
+				<div class="mt-3">
+					<label class="col-5" asp-for="pizzasModel.TomatoSauce"></label>
+					<input type="checkbox" asp-for=pizzasModel.TomatoSauce />
+				</div>
+				<div class="mt-3">
+					<label class="col-5" asp-for="pizzasModel.Cheese"></label>
+					<input type="checkbox" asp-for=pizzasModel.Cheese />
+				</div>
+				<div class="mt-3">
+					<label class="col-5" asp-for="pizzasModel.Peperoni"></label>
+					<input type="checkbox" asp-for=pizzasModel.Peperoni />
+				</div>
+				<div class="mt-3">
+					<label class="col-5" asp-for="pizzasModel.Mushroom"></label>
+					<input type="checkbox" asp-for=pizzasModel.Mushroom />
+				</div>
+				<div class="mt-3">
+					<label class="col-5" asp-for="pizzasModel.Tuna"></label>
+					<input type="checkbox" asp-for=pizzasModel.Tuna />
+				</div>
+				<div class="mt-3">
+					<label class="col-5" asp-for="pizzasModel.Pineapple"></label>
+					<input type="checkbox" asp-for=pizzasModel.Pineapple />
+				</div>
+				<div class="mt-3">
+					<label class="col-5" asp-for="pizzasModel.Ham"></label>
+					<input type="checkbox" asp-for=pizzasModel.Ham />
+				</div>
+				<div class="mt-3">
+					<label class="col-5"asp-for="pizzasModel.Beef"></label>
+					<input type="checkbox" asp-for=pizzasModel.Beef />
+				</div>
+
+				<div class="mt-3">
+					<button type="submit" class="btn btn-primary mt-1">Order!</button>
+				</div>
+			</form>
+		</div>
+@*		<div class="col-4">
+			<img class="mainImage" src="~/images/Pizzas/Create.png" />
+		</div>*@
+	</div>
+</div>

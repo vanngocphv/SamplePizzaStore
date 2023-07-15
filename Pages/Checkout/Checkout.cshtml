@@ -1,0 +1,24 @@
+﻿@page
+@model SampleStoreWebApp.Pages.Checkout.CheckoutModel
+@{
+	ViewData["Title"] = "Checkout";
+}
+<div class="container">
+	@{
+		var photoPath = "~/images/Pizzas/" + (@Model.ImageTitle + ".png");
+	}
+	<div class="row">
+		<h1>Your Order Pizza!</h1>
+	</div>
+
+	<div class="align-content-center">
+		<div class="col-3 mx-auto mb-5">
+			<img class="w-100" asp-append-version="true" src="@photoPath"/>
+			<p>Your order Pizza: @Model.PizzaName</p>
+			<p>Total price: @Model.PizzaPrice</p>
+			<br />
+			<a class="btn alert-primary mt-1 mx-auto" type="submit" asp-page="/Checkout/ThankYou">Confirm Order!</a>
+		</div>
+	</div>
+
+</div>

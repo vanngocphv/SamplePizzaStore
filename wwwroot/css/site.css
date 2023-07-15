@@ -1,0 +1,62 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #161616;
+  color: #ffffff
+}
+
+.mainText{
+    padding: 75px 20px;
+}
+
+.mainImage{
+    border-radius: 20px;
+    filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.4));
+    margin: 40px;
+}
+
+.mainSubtitle{
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.pizzaSubtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.smallText{
+    text-align: right;
+    color: rgb(165, 165, 165);
+
+}
+
+.CustomDiv {
+    background-color: rgba(200, 200, 200, 0.1);
+    margin: 0;
+}
+
+.CustomText{
+    margin: 100px 0px 20px 0px;
+}
+
+.customHeaderList {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+}

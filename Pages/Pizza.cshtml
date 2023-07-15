@@ -1,0 +1,45 @@
+﻿@page
+@model SampleStoreWebApp.Pages.PizzaModel
+@{
+    ViewData["Title"] = "Pizzas page";
+}
+
+<div class="text-center">
+    <div class="mainText">
+        <h1 class="display-4 text-capitalize text-white">Our greate selection of pizzas</h1>
+        <h5 class="pizzaSubtitle">Choose one, or try our Pizza Builder! Then Order and Done.</h5>
+        <h5 class="pizzaSubtitle">No need to give any of your details!</h5>
+        <h5 class="pizzaSubtitle">We already know everything!</h5>
+        <p class="smallText"><i>Only One pizza per One order</i></p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 mb-5">
+                <div class="w-100 row CustomDiv">
+                    <div class="col-4">
+                        <img class="w-100" src="~/images/Pizzas/Create.png" />
+                    </div>
+                    <div class="col-8 align-items-center">
+                        <div class="align-middle CustomText">
+                            <h3 style="text-align:left;">Create your Own pizza!</h3>
+                            <p style="text-align: left;">Make your Own pizza with our Pizza Builder!</p>
+                            <a class="btn btn-primary" style="float: left" asp-page="/Forms/CustomPizza">Click Here!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @foreach (var pizza in Model.PizzasDb)
+            {
+                var urlPhoto = "./images/Pizzas/" + (pizza.ImageTitle + ".png");
+                <div class="col-4 mb-5">
+                    <img class="w-100" src="@urlPhoto" asp-asp-append-version="true" />
+                    <a class="btn btn-outline-primary mt-1" asp-page="/Checkout/Checkout" asp-route-ImageTitle ="@pizza.ImageTitle" asp-route-PizzaPrice="@pizza.FinalPrice" asp-route-PizzaName="@pizza.PizzaName" >Order!</a>
+                    <br />
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+﻿@page
+@model SampleStoreWebApp.Pages.Histories.OrderHistoryModel
+@{
+	ViewData["Title"] = "Orders History";
+}
+
+<h1>Orders History</h1>
+<div class="align-items-center container mt-5 mb-5 mx-auto">
+	<div class="row customHeaderList">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach (var pizza in Model.pizzaOrderHistory)
+            {
+                <tr>
+                    <th scope="row">@pizza.PizzaId</th>
+                    <td>@pizza.PizzaName</td>
+                    <td>@pizza.BasePrice</td>
+                </tr>  
+            }
+          </tbody>
+        </table>
+	</div>
+</div>
